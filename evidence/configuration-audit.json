@@ -1,0 +1,32 @@
+[
+  {
+    "file": "eureka-server\\src\\main\\resources\\application.yml",
+    "root_keys": [
+      "server",
+      "spring",
+      "eureka",
+      "management"
+    ],
+    "valid": true
+  },
+  {
+    "file": "service-car\\src\\main\\resources\\application.yml",
+    "root_keys": [
+      "server",
+      "spring",
+      "eureka",
+      "management"
+    ],
+    "valid": true
+  },
+  {
+    "file": "service-client\\src\\main\\resources\\application.yml",
+    "root_keys": [
+      "server",
+      "spring",
+      "eureka",
+      "management"
+    ],
+    "valid": true
+  }
+]
