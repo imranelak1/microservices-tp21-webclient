@@ -1,0 +1,175 @@
+[
+  {
+    "method": "GET",
+    "url": "http://localhost:19213/api/cars/1",
+    "status": 200,
+    "response": {
+      "id": 1,
+      "marque": "Toyota",
+      "modele": "Yaris",
+      "matricule": "A 25 333",
+      "clientId": 1,
+      "client": {
+        "id": 1,
+        "nom": "Rabab SELIMANI",
+        "age": 23.0
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "url": "http://localhost:19211/eureka/apps",
+    "status": 200,
+    "response": {
+      "applications": {
+        "versions__delta": "1",
+        "apps__hashcode": "UP_2_",
+        "application": [
+          {
+            "name": "SERVICE-CAR",
+            "instance": [
+              {
+                "instanceId": "SERVICE-CAR:19213",
+                "hostName": "127.0.0.1",
+                "app": "SERVICE-CAR",
+                "ipAddr": "127.0.0.1",
+                "status": "UP",
+                "overriddenStatus": "UNKNOWN",
+                "port": {
+                  "$": 19213,
+                  "@enabled": "true"
+                },
+                "securePort": {
+                  "$": 443,
+                  "@enabled": "false"
+                },
+                "countryId": 1,
+                "dataCenterInfo": {
+                  "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+                  "name": "MyOwn"
+                },
+                "leaseInfo": {
+                  "renewalIntervalInSecs": 5,
+                  "durationInSecs": 90,
+                  "registrationTimestamp": 1792026358449,
+                  "lastRenewalTimestamp": 1792026358449,
+                  "evictionTimestamp": 0,
+                  "serviceUpTimestamp": 1792026358449
+                },
+                "metadata": {
+                  "management.port": "19213"
+                },
+                "homePageUrl": "http://127.0.0.1:19213/",
+                "statusPageUrl": "http://127.0.0.1:19213/actuator/info",
+                "healthCheckUrl": "http://127.0.0.1:19213/actuator/health",
+                "vipAddress": "SERVICE-CAR",
+                "secureVipAddress": "SERVICE-CAR",
+                "isCoordinatingDiscoveryServer": "false",
+                "lastUpdatedTimestamp": "1792026358449",
+                "lastDirtyTimestamp": "1792026358347",
+                "actionType": "ADDED"
+              }
+            ]
+          },
+          {
+            "name": "SERVICE-CLIENT",
+            "instance": [
+              {
+                "instanceId": "SERVICE-CLIENT:19212",
+                "hostName": "127.0.0.1",
+                "app": "SERVICE-CLIENT",
+                "ipAddr": "127.0.0.1",
+                "status": "UP",
+                "overriddenStatus": "UNKNOWN",
+                "port": {
+                  "$": 19212,
+                  "@enabled": "true"
+                },
+                "securePort": {
+                  "$": 443,
+                  "@enabled": "false"
+                },
+                "countryId": 1,
+                "dataCenterInfo": {
+                  "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+                  "name": "MyOwn"
+                },
+                "leaseInfo": {
+                  "renewalIntervalInSecs": 5,
+                  "durationInSecs": 90,
+                  "registrationTimestamp": 1792026305535,
+                  "lastRenewalTimestamp": 1792026445130,
+                  "evictionTimestamp": 0,
+                  "serviceUpTimestamp": 1792026305547
+                },
+                "metadata": {
+                  "management.port": "19212"
+                },
+                "homePageUrl": "http://127.0.0.1:19212/",
+                "statusPageUrl": "http://127.0.0.1:19212/actuator/info",
+                "healthCheckUrl": "http://127.0.0.1:19212/actuator/health",
+                "vipAddress": "SERVICE-CLIENT",
+                "secureVipAddress": "SERVICE-CLIENT",
+                "isCoordinatingDiscoveryServer": "false",
+                "lastUpdatedTimestamp": "1792026305547",
+                "lastDirtyTimestamp": "1792026304869",
+                "actionType": "ADDED"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "url": "http://localhost:19212/api/clients",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "nom": "Rabab SELIMANI",
+        "age": 23.0
+      },
+      {
+        "id": 2,
+        "nom": "Amal RAMI",
+        "age": 22.0
+      },
+      {
+        "id": 3,
+        "nom": "Samir SAFI",
+        "age": 22.0
+      }
+    ]
+  },
+  {
+    "method": "GET",
+    "url": "http://localhost:19213/api/cars/byClient/1",
+    "status": 200,
+    "response": [
+      {
+        "id": 1,
+        "marque": "Toyota",
+        "modele": "Yaris",
+        "matricule": "A 25 333",
+        "clientId": 1,
+        "client": {
+          "id": 1,
+          "nom": "Rabab SELIMANI",
+          "age": 23.0
+        }
+      }
+    ]
+  },
+  {
+    "method": "GET",
+    "url": "http://localhost:19213/api/test/client/1",
+    "status": 200,
+    "response": {
+      "id": 1,
+      "nom": "Rabab SELIMANI",
+      "age": 23.0
+    }
+  }
+]

@@ -1,0 +1,10 @@
+GET http://host.docker.internal:19211/eureka/apps
+HTTP 200
+Eureka : services enregistrés = SERVICE-CAR, SERVICE-CLIENT
+GET http://host.docker.internal:19212/api/clients
+HTTP 200
+GET http://host.docker.internal:19213/api/cars/byClient/1
+HTTP 200
+GET http://host.docker.internal:19213/api/test/client/1
+HTTP 200
+Toutes les assertions du scénario sont passées.

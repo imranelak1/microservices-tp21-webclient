@@ -1,0 +1,54 @@
+GET http://host.docker.internal:19212/api/clients
+HTTP 200
+[
+  {
+    "id": 1,
+    "nom": "Rabab SELIMANI",
+    "age": 23.0
+  },
+  {
+    "id": 2,
+    "nom": "Amal RAMI",
+    "age": 22.0
+  },
+  {
+    "id": 3,
+    "nom": "Samir SAFI",
+    "age": 22.0
+  }
+]
+GET http://host.docker.internal:19213/api/cars/byClient/1
+HTTP 200
+[
+  {
+    "id": 1,
+    "marque": "Toyota",
+    "modele": "Yaris",
+    "matricule": "A 25 333",
+    "clientId": 1,
+    "client": {
+      "id": 1,
+      "nom": "Rabab SELIMANI",
+      "age": 23.0
+    }
+  },
+  {
+    "id": 2,
+    "marque": "Renault",
+    "modele": "Megane",
+    "matricule": "B 6 3456",
+    "clientId": 1,
+    "client": {
+      "id": 1,
+      "nom": "Rabab SELIMANI",
+      "age": 23.0
+    }
+  }
+]
+GET http://host.docker.internal:19213/api/test/client/1
+HTTP 200
+{
+  "id": 1,
+  "nom": "Rabab SELIMANI",
+  "age": 23.0
+}

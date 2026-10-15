@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS clientservicedb;
+CREATE DATABASE IF NOT EXISTS carservicedb;
